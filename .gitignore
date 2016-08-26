@@ -1,0 +1,8 @@
+.*
+*.o
+*.a
+*.so.*
+tipu
+tipu-shared
+tipu-static
+!.gitignore
