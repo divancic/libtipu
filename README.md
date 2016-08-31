@@ -12,6 +12,8 @@ First make sure you set the proper values for CC and LD variables (see the Makef
 make CROSS=Y
 ```
 
+Or you can simply use included bitbake recipe.
+
 ## Installation
 ```
 make install
