@@ -11,9 +11,6 @@ ifeq (y,$(findstring y,$(CROSS)))
 	CROSS_FLAGS=-march=armv7-a -marm -mthumb-interwork -mfloat-abi=hard -mfpu=neon --sysroot=$(SYSROOT)
 	CC=$(CROSS_PATH)$(CROSS_PREFIX)-gcc $(CROSS_FLAGS)
 	LD=$(CROSS_PATH)$(CROSS_PREFIX)-ld
-else
-	CC=gcc
-	LD=ld
 endif
 
 CFLAGS=$(DEBUG) -pedantic -Wall -fPIC -g -I.
