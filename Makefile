@@ -55,8 +55,9 @@ tags: $(SRC)
 
 .PHONY: install
 install: $(BIN) $(LIBS)
+	mkdir -p $(INSTALL_PREFIX)$(BIN_TARGET_DIR)
 	cp -a $(BINS) $(INSTALL_PREFIX)$(BIN_TARGET_DIR)
-	install -m 755 -d $(INSTALL_PREFIX)$(LIB_TARGET_DIR)
+	mkdir -p $(INSTALL_PREFIX)$(LIB_TARGET_DIR)
 	cp -a $(LIBS) $(INSTALL_PREFIX)$(LIB_TARGET_DIR)
 
 .PHONY: uninstall
